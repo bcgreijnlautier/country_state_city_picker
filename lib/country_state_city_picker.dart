@@ -159,7 +159,6 @@ class _SelectStateState extends State<SelectState> {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         SizedBox(
-          width: widget.dropdownWidth,
           child: DropdownButton<String>(
             dropdownColor: widget.dropdownColor,
             isExpanded: true,
@@ -180,8 +179,8 @@ class _SelectStateState extends State<SelectState> {
             value: _selectedCountry,
           ),
         ),
+        SizedBox(width: widget.spacing),
         SizedBox(
-          width: widget.dropdownWidth,
           child: DropdownButton<String>(
             dropdownColor: widget.dropdownColor,
             isExpanded: true,
@@ -195,8 +194,8 @@ class _SelectStateState extends State<SelectState> {
             value: _selectedState,
           ),
         ),
+        SizedBox(width: widget.spacing),
         SizedBox(
-          width: widget.dropdownWidth,
           child: DropdownButton<String>(
             dropdownColor: widget.dropdownColor,
             isExpanded: true,
