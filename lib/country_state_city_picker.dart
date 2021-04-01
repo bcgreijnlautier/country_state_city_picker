@@ -4,6 +4,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
+import 'package:flutter/widgets.dart';
 
 import 'model/select_status_model.dart' as StatusModel;
 
@@ -30,7 +31,7 @@ class SelectState extends StatefulWidget {
     this.selectStateText = 'State',
     this.selectCountryText = 'Country',
     this.spacing = 10,
-    this.dropdownWidth = 100,
+    this.dropdownWidth = 150,
   }) : super(key: key);
 
   @override
@@ -154,8 +155,8 @@ class _SelectStateState extends State<SelectState> {
 
   @override
   Widget build(BuildContext context) {
-    return Wrap(
-      spacing: widget.spacing,
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         SizedBox(
           width: widget.dropdownWidth,
